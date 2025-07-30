@@ -12,6 +12,8 @@ space_facts = [
     {"id": 5, "fact": "Венера - самая горячая планета в Солнечной системе"},
 ]
 
+company_info = {"company_name": "Horns and Hooves", "company_address": "Pushkin street, 12"}
+
 router = APIRouter()
 
 
@@ -28,6 +30,14 @@ def read_html_file():
 )
 async def main_page():
     return read_html_file()
+
+
+@router.get(
+    path="/info",
+    description="Get company info"
+)
+async def get_info():
+    return company_info
 
 
 @router.get(

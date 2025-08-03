@@ -1,0 +1,14 @@
+line-length = 120
+extend-exclude = ["migrations/"]
+target-version = "py37"
+
+[lint]
+select = ["I", "PLR0912", "PLR0913", "PLR0915"]
+
+[lint.mccabe]
+max-complexity = 7
+
+[lint.pylint]
+max-args = 3
+max-branches = 13
+max-statements = 55
